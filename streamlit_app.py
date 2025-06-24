@@ -9,7 +9,7 @@ from huggingface_hub import hf_hub_download
 # Load model from Hugging Face (cached on first run)
 @st.cache_resource
 def load_model():
-    model_path = hf_hub_download(repo_id="your-username/vit-catdog-model", filename="vit_model.pth")
+    model_path = hf_hub_download(repo_id="glen-louis/cat-dogs", filename="vit_model.pth")
     model = timm.create_model("vit_base_patch16_224", pretrained=False)
     model.head = nn.Linear(model.head.in_features, 2)
     model.load_state_dict(torch.load(model_path, map_location="cpu"))
