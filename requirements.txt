@@ -1,0 +1,6 @@
+streamlit
+torch
+torchvision
+timm
+Pillow
+huggingface_hub
