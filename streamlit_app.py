@@ -13,7 +13,7 @@ st.set_page_config(page_title="Cat vs Dog Classifier", layout="centered")
 @st.cache_resource
 def load_model():
     model_path = hf_hub_download(
-        repo_id="your-username/vit-catdog-model",  # Replace with your Hugging Face repo
+        repo_id="glen-louis/cat-dogs",  
         filename="vit_model.pth"
     )
     model = timm.create_model("vit_base_patch16_224", pretrained=False)
