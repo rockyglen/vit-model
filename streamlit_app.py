@@ -68,14 +68,27 @@ if file is not None:
         class_labels = ["Cat", "Dog"]
         confidence = probabilities[predicted_class].item()
 
-        st.markdown(
-            f"<div style='font-size: 20px; font-weight: bold;'>Class: {class_labels[predicted_class]}</div>",
-            unsafe_allow_html=True
-        )
-        st.markdown(
-            f"<div style='font-size: 16px;'>Confidence: {confidence:.2%}</div>",
-            unsafe_allow_html=True
-        )
+        # Confidence threshold to determine if image might be neither
+        confidence_threshold = 0.75
+
+        if confidence < confidence_threshold:
+            st.markdown(
+                f"<div style='font-size: 20px; font-weight: bold; color: orange;'>Class: Neither Cat nor Dog</div>",
+                unsafe_allow_html=True
+            )
+            st.markdown(
+                f"<div style='font-size: 16px;'>The model is not confident enough to classify this image as a cat or a dog (Confidence: {confidence:.2%}).</div>",
+                unsafe_allow_html=True
+            )
+        else:
+            st.markdown(
+                f"<div style='font-size: 20px; font-weight: bold;'>Class: {class_labels[predicted_class]}</div>",
+                unsafe_allow_html=True
+            )
+            st.markdown(
+                f"<div style='font-size: 16px;'>Confidence: {confidence:.2%}</div>",
+                unsafe_allow_html=True
+            )
 
     except UnidentifiedImageError:
         st.error("The uploaded file is not a valid image or is corrupted.")
