@@ -4,7 +4,7 @@ This project demonstrates an end-to-end pipeline for training and deploying a **
 
 The trained model is **hosted on Hugging Face Hub**, which allows the Streamlit app to dynamically download and load it at runtime.
 
----
+
 
 ## 🧠 Model Overview
 
@@ -16,10 +16,10 @@ The trained model is **hosted on Hugging Face Hub**, which allows the Streamlit 
   - Test Accuracy: **98.77%**
 - **Model Hosting**: [Hugging Face Hub](https://huggingface.co/) (`glen-louis/cat-dogs`)
 
----
 
 
----
+
+
 
 ## 🚀 Installation & Setup
 
