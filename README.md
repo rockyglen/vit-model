@@ -1,4 +1,4 @@
-# 🐱🐶 Cat vs Dog Classifier (ViT-based)
+#  Cat vs Dog Classifier (ViT-based)
 
 This project demonstrates an end-to-end pipeline for training and deploying a **Vision Transformer (ViT)** model to classify images as either **Cat** or **Dog** using the [PetImages dataset](https://www.microsoft.com/en-us/download/details.aspx?id=54765). The model is trained using PyTorch and deployed via a simple **Streamlit** web app.
 
@@ -6,7 +6,7 @@ The trained model is **hosted on Hugging Face Hub**, which allows the Streamlit 
 
 
 
-## 🧠 Model Overview
+##  Model Overview
 
 - **Architecture**: Vision Transformer (ViT-B/16) from the `timm` library
 - **Dataset**: 25,000+ labeled cat and dog images
@@ -21,7 +21,7 @@ The trained model is **hosted on Hugging Face Hub**, which allows the Streamlit 
 
 
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the repository
 
